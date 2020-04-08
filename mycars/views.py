@@ -42,9 +42,7 @@ def year_delete(request, pk):
     return redirect('year_list')
 
 def modeltype_list(request):
-    modeltypes = ModelType.objects.all().extra(
-        order_by=['year']
-    )
+    modeltypes = ModelType.objects.all()
     return render(request, 'mycars/modeltype_list.html', {'modeltypes': modeltypes})
 
 def modeltype_detail(request, pk):

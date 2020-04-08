@@ -6,8 +6,7 @@
     {% for modeltype in modeltypes %}
     <li>
         <a href="{% url 'modeltype_detail' pk=modeltype.pk %}">
-            {{ modeltype }}
-            <!-- {{ modeltype.year }} {{ modeltype.make }} {{ modeltype.name }} -->
+            {{ modeltype.year }} {{ modeltype.make }} {{ modeltype.name }}
         </a>
     </li>
     {% endfor %}
