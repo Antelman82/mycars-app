@@ -47,15 +47,15 @@ The main objective of this project was to be challenged to build a Django projec
 ## Necessary Deliverables
 https://git.generalassemb.ly/jdr-0127/django-project
 > Your submission must include all of the following:
-
+>
 > 1. Your project idea (a brief 2-3 sentence description of your app)
 > 1. A list of your models and their properties
-
+>
 > Your project is due on the Monday, April 13th 8am CST. Create an issue on Python Project Repo Issues containing:
-
+>
 > - A link to your repository
 > The repository for your project should include:
-
+>
 > - A working Django application built by you that meets the technical requirements above.
 > - Frequent commits dating back to the very beginning of the project.
 > - A readme.md file in the root of your repo that follows good standards of documentation (i.e. explanations of the technologies used, the approach taken, features, installation instructions, unsolved problems, etc.)
