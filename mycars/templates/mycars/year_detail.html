@@ -1,0 +1,17 @@
+{% extends 'mycars/base.html' %}
+
+{% block content %}
+<h2>{{ year.model_year }} <a href="{% url 'year_edit' pk=year.pk %}">(edit)</a></h2>
+
+<h3>Models <a href="{% url 'modeltype_create' %}">(+)</a></h3>
+<ul>
+    {% for model in year.models.all %}
+    <li>
+
+        <a href="{% url 'model_detail' pk=model.pk %}">
+            {{ model.name }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'mycars/base.html' %}
+
+{% block content %}
+<h2>Model: {{ modeltype.name }} <a href="{% url 'modeltype_edit' pk=modeltype.pk %}">(edit)</a></h2>
+<h3>{{ modeltype.year.model_year }}</h3>
+<p>Description: {{ modeltype.description }}</p>
+<img src="{{ modeltype.image_url }}" alt="" class="modeltype-photo">
+<img src="/media/{{ modeltype.image_file }}" alt="" class="modeltype-photo">
+{% endblock %}

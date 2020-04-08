@@ -1,0 +1,20 @@
+<!-- mycars/templates/mycars/base.html -->
+{% load static %}
+<html>
+
+<head>
+    <title>MyCars</title>
+    <link rel="stylesheet" href="{% static 'css/mycars.css' %}">
+</head>
+
+<body>
+    <h1>My.Cars</h1>
+    <nav>
+        <a href="/">Years</a>
+        <a href="{% url 'modeltype_list' %}">Models</a>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>
