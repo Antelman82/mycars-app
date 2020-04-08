@@ -151,4 +151,7 @@ vscode
 google chrome
 
 ## Dependencies
+- Django
+- psycopg2-binary
+
 
