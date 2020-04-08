@@ -4,7 +4,9 @@ from .models import Year, ModelType
 
 
 def year_list(request):
-    years = Year.objects.all()
+    years = Year.objects.all().extra(
+        order_by=['model_year']
+    )
     return render(request, 'mycars/year_list.html', {'years': years})
 
 def year_detail(request, pk):
@@ -40,7 +42,9 @@ def year_delete(request, pk):
     return redirect('year_list')
 
 def modeltype_list(request):
-    modeltypes = ModelType.objects.all()
+    modeltypes = ModelType.objects.all().extra(
+        order_by=['year']
+    )
     return render(request, 'mycars/modeltype_list.html', {'modeltypes': modeltypes})
 
 def modeltype_detail(request, pk):
