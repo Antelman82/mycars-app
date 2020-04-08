@@ -153,5 +153,6 @@ google chrome
 ## Dependencies
 - Django
 - psycopg2-binary
+- Pillow
 
 
