@@ -1,4 +1,4 @@
-{% extends "tunr/base.html" %} {% block content %}
+{% extends "mycars/base.html" %} {% block content %}
 
 <form method="post" action="{% url 'signup' %}">
   {% csrf_token %} {{form.as_p}}
