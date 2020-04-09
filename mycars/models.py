@@ -21,17 +21,17 @@ class ModelType(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.id:
-        self.image_file = self.compressImage(self.image_file)
-    super(ModelType, self).save(*args, **kwargs)
+            self.image_file = self.compressImage(self.image_file)
+        super(ModelType, self).save(*args, **kwargs)
 
     def compressImage(self, image_file):
         imageTemproary = Image.open(image_file)
-    outputIoStream = BytesIO()
-    imageTemproaryResized = imageTemproary.resize( (300,300) ) 
-    imageTemproary.save(outputIoStream , format='JPEG', quality=20)
-    outputIoStream.seek(0)
-    image_file = InMemoryUploadedFile(outputIoStream,'ImageField', "%s.jpg" % modeltype.name.split('.')[0], 'image/jpeg', sys.getsizeof(outputIoStream), None)
-    return image_file
+        outputIoStream = BytesIO()
+        imageTemproaryResized = imageTemproary.resize( (300,300) ) 
+        imageTemproary.save(outputIoStream , format='JPEG', quality=20)
+        outputIoStream.seek(0)
+        image_file = InMemoryUploadedFile(outputIoStream,'ImageField', "%s.jpg" % modeltype.name.split('.')[0], 'image/jpeg', sys.getsizeof(outputIoStream), None)
+        return image_file
 
     def __str__(self):
         return self.name
